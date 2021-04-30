@@ -1,3 +1,5 @@
+# Created on 2021-04-30 by Walter Hsieh
+
 from flask import Flask, request, abort
 
 from linebot import (
@@ -38,7 +40,13 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage'''
+
+	chat = {'Who are you?':'I am a line-bot, nice to meet you',
+	'How old are you?':'I was created on 2021-04-30 by first Walter Hsieh',
+	'Habbit':'I just like you, also like to learn English'
+	}
+
 
 	Location = ['Location', 'location', '1']
 	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
@@ -57,6 +65,9 @@ def handle_message(event):
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
+
+	elif msg in chat.keys():
+		r = chat[msg]
 
 	line_bot_api.reply_message(
 		event.reply_token,
