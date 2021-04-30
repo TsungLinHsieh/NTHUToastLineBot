@@ -38,8 +38,17 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	if msg == 'what is TME?':
-		r = 'TME is Toastmaster of the evening'
+	r = '''Hi there, thanks for adding me as friend! 
+	       Which information you want to know? 
+	       location, meeting time, contact window
+	       '''
+	if 'TME' in msg:
+		r = 'TME is Toastmaster of the evening.'
+	elif 'location'in msg:
+		r = 'NTHU Delta Hall R601 (清華大學 台達館 601室)'
+	elif 'time' in msg:
+		r = 'Meeting will be held from 19:00 to 21:00 every Thursday.'
+
 	line_bot_api.reply_message(
 		event.reply_token,
 		TextSendMessage(text=r))
