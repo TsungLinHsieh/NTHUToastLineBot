@@ -38,11 +38,19 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = "Hi there, thanks for adding me as friend! Which information you want to know? location, meeting time or contact window."
+	r = '''Hi there, thanks for adding me as friend! I am line-bot. 
+	Which information you want to know?
+	(1)location
+	(2)meeting time
+	(3)contact window
+	(4)FB Fanpage
+	'''
 
-	Location = ['Location', 'location']
-	Time = ['Time', 'time', 'meeting time', 'Meeting time']
-	Contact = ['Window','window','Contact','contact', 'Contact window','contact window']
+	Location = ['Location', 'location', '1']
+	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
+	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
+	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
+
 
 	if msg in Location:
 		r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
@@ -52,6 +60,9 @@ def handle_message(event):
 
 	elif msg in Contact:
 		r = 'You can contact Johnny, president of this club, for more information. LINE ID:'
+
+	elif msg in FB:
+		r = 'https://www.facebook.com/nthutoastmasters/'
 
 	line_bot_api.reply_message(
 		event.reply_token,
