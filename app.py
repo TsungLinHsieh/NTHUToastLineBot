@@ -38,7 +38,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am line-bot.'\n'Which information you want to know?'\n'(1)location'\n'(2)meeting time'\n'(3)contact window'\n'(4)FB Fanpage'''
+	r = '''Hi there, thanks for adding me as friend! I am line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage'''
 
 	Location = ['Location', 'location', '1']
 	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
