@@ -40,13 +40,13 @@ def handle_message(event):
 	msg=event.message.text
 	r = "Hi there, thanks for adding me as friend! Which information you want to know? location, meeting time or contact window."
 
-	if 'location' or 'Location' in msg:
+	if 'Location' in msg:
 		r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
 
-	elif 'Time' or 'time' in msg:
+	elif 'Time' in msg:
 		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
 
-	elif 'contact window' or 'window' or 'Contact window' in msg:
+	elif 'Contact window' in msg:
 		r = 'You can contact Johnny for more information. LINE ID:'
 
 	line_bot_api.reply_message(
