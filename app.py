@@ -41,7 +41,7 @@ def handle_message(event):
 	s = '妳吃飯了嗎?'
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=))  #要回傳得訊息內容
+        TextSendMessage(text= s))  #要回傳得訊息內容
 
 
 if __name__ == "__main__":
