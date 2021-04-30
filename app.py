@@ -52,8 +52,7 @@ def handle_message(event):
 	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
 	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
-	Me = ['About me','about me', 'me','5']
-	Q = chat.keys()
+	Me = ['About me','about me', 'me','Me','5']
 
 
 	if msg in Location:
@@ -72,7 +71,7 @@ def handle_message(event):
 		r = chat[msg]
 
 	elif msg in Me:
-		r = Q
+		r = 'Questions about me are listed below\nWho are you?\nHow old are you?\nWhat is your hobby?'
 
 	line_bot_api.reply_message(
 		event.reply_token,
