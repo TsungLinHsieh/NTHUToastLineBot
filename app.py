@@ -41,7 +41,7 @@ def handle_message(event):
 	r = "Hi there, thanks for adding me as friend! Which information you want to know? location, meeting time or contact window."
 
 	Location = ['Location', 'location']
-	Time = ['Time', 'time']
+	Time = ['Time', 'time', 'meeting time', 'Meeting time']
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window']
 
 	if msg in Location:
