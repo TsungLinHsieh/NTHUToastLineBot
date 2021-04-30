@@ -40,11 +40,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage\n(5)About me'''
 
 	chat = {'Who are you?':'I am a line-bot, nice to meet you',
-	'How old are you?':'I was created on 2021-04-30 by first Walter Hsieh',
-	'Habbit':'I just like you, also like to learn English'
+	'How old are you?':'I was first created on 2021-04-30 by Walter Hsieh',
+	'What is your hobby?':'I am just like you also like to learn English'
 	}
 
 
@@ -52,6 +52,8 @@ def handle_message(event):
 	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
 	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
+	Me = ['About me','about me', 'me','5']
+	Q = chat.keys()
 
 
 	if msg in Location:
@@ -68,6 +70,9 @@ def handle_message(event):
 
 	elif msg in chat.keys():
 		r = chat[msg]
+
+	elif msg in Me:
+		r = Q
 
 	line_bot_api.reply_message(
 		event.reply_token,
