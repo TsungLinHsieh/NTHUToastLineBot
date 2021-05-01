@@ -76,7 +76,7 @@ def handle_message(event):
 		r = 'Questions about me are listed below\nWho are you?\nHow old are you?\nWhat is your hobby?'
 	
 	elif msg in roles:
-		r = 'https://docs.google.com/document/d/1zoUYqgRu1WZsW6JskEIcREDTjjuBoVh36v2FcbwLZwc/edit?pli=1'
+		r = 'https://www.toastmasters.org/membership/club-meeting-roles'
 
 	line_bot_api.reply_message(
 		event.reply_token,
