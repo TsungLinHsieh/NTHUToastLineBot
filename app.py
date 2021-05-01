@@ -42,9 +42,9 @@ def handle_message(event):
 	msg=event.message.text
 	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage\n(5)About me'''
 
-	chat = {'Who are you?':'I am a line-bot, nice to meet you',
-	'How old are you?':'I was first created on 2021-04-30 by Walter Hsieh',
-	'What is your hobby?':'I am just like you also like to learn English'
+	chat = {'Who are you?':'I am a line-bot serving for NTHU toastmasters. And you are?',
+	'How old are you?':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
+	'What is your hobby?':'I like to chat with people even though we are nothing to say :)'
 	}
 
 
@@ -73,7 +73,7 @@ def handle_message(event):
 		r = chat[msg]
 
 	elif msg in Me:
-		r = 'Questions about me are listed below\nWho are you?\nHow old are you?\nWhat is your hobby?'
+		r = 'Questions about me are listed below\n(1)Who are you?\n(2)How old are you?\n(3)What is your hobby?'
 	
 	elif msg in roles:
 		r = 'https://www.toastmasters.org/membership/club-meeting-roles'
