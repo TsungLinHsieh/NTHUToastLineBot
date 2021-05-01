@@ -40,7 +40,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage\n(5)About me'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage\n(5)About me\n(6)Roles'''
 
 	chat = {'Who are you?':'I am a line-bot serving for NTHU toastmasters. And you are?',
 	'How old are you?':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
@@ -53,7 +53,7 @@ def handle_message(event):
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
 	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
 	Me = ['About me','about me', 'me','Me','5']
-	roles = ['roles','role','Role', 'Roles','TME','Timer','counter','Counter','grammarian','Grammarian','Evaluator','evaluator']
+	roles = ['roles','role','Role', 'Roles','TME','Timer','counter','Counter','grammarian','Grammarian','Evaluator','evaluator', '6']
 
 
 
