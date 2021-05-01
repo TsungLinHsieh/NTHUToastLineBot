@@ -53,6 +53,8 @@ def handle_message(event):
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
 	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
 	Me = ['About me','about me', 'me','Me','5']
+	roles = ['roles','role','Role', 'Roles','TME','Timer','counter','Counter','grammarian','Grammarian','Evaluator','evaluator']
+
 
 
 	if msg in Location:
@@ -72,6 +74,9 @@ def handle_message(event):
 
 	elif msg in Me:
 		r = 'Questions about me are listed below\nWho are you?\nHow old are you?\nWhat is your hobby?'
+	
+	elif msg in roles:
+		r = 'https://docs.google.com/document/d/1zoUYqgRu1WZsW6JskEIcREDTjjuBoVh36v2FcbwLZwc/edit?pli=1'
 
 	line_bot_api.reply_message(
 		event.reply_token,
