@@ -40,11 +40,11 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n(1)location\n(2)meeting time\n(3)contact window\n(4)FB Fanpage\n(5)About me\n(6)Roles'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3  contact window\n4 FB Fanpage\n5 About me\n6 Roles'''
 
-	chat = {'Who are you?':'I am a line-bot serving for NTHU toastmasters. And you are?',
-	'How old are you?':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
-	'What is your hobby?':'I like to chat with people even though we are nothing to say :)'
+	chat = {'(1)':'I am a line-bot serving for NTHU toastmasters. And you are?',
+	'(2)?':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
+	'(3)?':'I like to chat with people even though we have nothing to say :)'
 	}
 
 
