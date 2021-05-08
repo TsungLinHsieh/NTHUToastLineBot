@@ -43,10 +43,10 @@ def handle_message(event):
 	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3  contact window\n4 FB Fanpage\n5 About me\n6 Roles'''
 
 	chat = {
-	'(1)':"No, you don't need to be fluent. Here we provide friendly and English immersing evironment for you to practice."
-	'(2)':"Don't worry about that. Only thing you need is to come and have fun."
-	'(3)':'Join our regular meeting, we will help to go through the process.'
-	'(4)':"Toastmasters is nonprofit educational organization which helps its members improve their public speaking skills and build their leadership style."
+	'(1)':"No, you don't need to be fluent. Here we provide friendly and English immersing evironment for you to practice.",
+	'(2)':"Don't worry about that. Only thing you need is to come and have fun.",
+	'(3)':'Join our regular meeting, we will help to go through the process.',
+	'(4)':"Toastmasters is nonprofit educational organization which helps its members improve their public speaking skills and build their leadership style.",
 	'(5)':'I am a line-bot serving for NTHU toastmasters. And you are?',
 	'(6)':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
 	'(7)':'I like to chat with people even though we have nothing to say :)'
