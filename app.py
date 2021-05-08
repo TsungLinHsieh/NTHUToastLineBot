@@ -48,23 +48,31 @@ def handle_message(event):
 	}
 
 
-	Location = ['Location', 'location', '1']
+	Location = ['Location', 'location', '1', 'Location & Meeting Time']
 	Time = ['Time', 'time', 'meeting time', 'Meeting time','2']
 	Contact = ['Window','window','Contact','contact', 'Contact window','contact window','3']
 	FB = ['facebook', 'Facebook', 'fb', 'FB','Fanpage', 'fanpage', 'FB fanpage','FB Fanpage','4']
 	Me = ['About me','about me', 'me','Me','5']
 	roles = ['roles','role','Role', 'Roles','TME','Timer','counter','Counter','grammarian','Grammarian','Evaluator','evaluator', '6']
-
+	Q = [
+	'1. Should I speak English fluently?', 
+	'2. Should I learn any thing before I join?', 
+	'3. How to join this club?',
+	'4. What is Toastmaster?'
+	]
 
 
 	if msg in Location:
 		r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
 
+	elif msg == 'Location & Meeting Time':
+		r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室) from 19:00 to 21:00 every Thursday'
+
 	elif msg in Time:
 		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
-		r = 'You can contact Johnny (President, LINE ID:), \n Walter (LINE ID: Walter0309) for more information, \n or Go to our FB fan page and leave message by Messenger.'
+		r = 'You can contact Johnny (President, LINE ID:),\n Walter (LINE ID: Walter0309) for more information,\nor Go to our FB fan page and leave us message by Messenger.'
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
@@ -77,6 +85,10 @@ def handle_message(event):
 	
 	elif msg in roles:
 		r = 'https://www.toastmasters.org/membership/club-meeting-roles'
+
+	elif msg == 'Q&A':
+		for i in Q:
+			r = Q[i]
 
 	line_bot_api.reply_message(
 		event.reply_token,
