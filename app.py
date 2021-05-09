@@ -40,7 +40,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3  contact window\n4 FB Fanpage\n5 About me\n6 Roles'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3  Contact window\n4 FB Fan page\n5 About me\n6 Roles\n Please type number 1,2,3...for the answer'''
 
 	chat = {
 	'(1)':"No, you don't need to be fluent. Here we provide friendly and English immersing evironment for you to practice.",
@@ -72,7 +72,7 @@ def handle_message(event):
 		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
-		r = 'You can contact Johnny (President, LINE ID:),\nWalter (LINE ID: Walter0309) for more information,\nOr go to our FB fan page and leave us message by Messenger.'
+		r = 'You can contact Johnny (President, LINE ID:),\nWalter (LINE ID: walter0309) for more information,\nOr go to our FB fan page and leave us message by Messenger.'
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
@@ -81,13 +81,13 @@ def handle_message(event):
 		r = chat[msg]
 
 	elif msg in Me:
-		r = 'Questions about me are listed below\n(5)Who are you?\n(6)How old are you?\n(7)What is your hobby?'
+		r = 'Questions about me are listed below\n(5) Who are you?\n(6) How old are you?\n(7) What is your hobby?\nPlease type (1), (2)...for the annswer'
 	
 	elif msg in roles:
 		r = 'https://www.toastmasters.org/membership/club-meeting-roles'
 
 	elif msg == 'Q&A':
-		r = '(1) Should I speak English fluently?\n(2) Should I learn any thing before I join?\n(3) How to join this club?\n(4) What is Toastmaster?'
+		r = '(1) Should I speak English fluently?\n(2) Should I learn any thing before I join?\n(3) How to join this club?\n(4) What is Toastmaster?\nPlease type (1), (2)...for the annswer'
 
 
 	line_bot_api.reply_message(
