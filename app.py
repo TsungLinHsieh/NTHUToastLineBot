@@ -72,10 +72,7 @@ def handle_message(event):
 		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
-		r = '''You can contact\nJohnny
-		chenhuachuang@gmail.com\nWalter
-		hsieh.tl@outlook.com\nLesley
-		huang3657@gmail.com for more information,or go to our FB fan page and leave us message via Messenger.'''
+		r = '''You can contact\nJohnny chenhuachuang@gmail.com\nWalter hsieh.tl@outlook.com\nLesley huang3657@gmail.com for more information,or go to our FB fan page and leave us message via Messenger.'''
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
