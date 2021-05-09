@@ -40,7 +40,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
 	msg=event.message.text
-	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3  Contact window\n4 FB Fan page\n5 About me\n6 Roles\n Please type number 1,2,3...for the answer'''
+	r = '''Hi there, thanks for adding me as friend! I am a line-bot.\nWhich information you want to know?\n1 Location\n2 Meeting time\n3 Contact window\n4 FB Fan page\n5 About me\n6 Roles\n Please type the number 1,2,3...for the answer'''
 
 	chat = {
 	'(1)':"No, you don't need to be fluent. Here we provide friendly and English immersing evironment for you to practice.",
@@ -72,7 +72,13 @@ def handle_message(event):
 		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
-		r = 'You can contact Johnny (President, LINE ID:),\nWalter (LINE ID: walter0309) for more information,\nOr go to our FB fan page and leave us message by Messenger.'
+		r = '''You can contact\n
+		Johnny email: chenhuachuang@gmail.com,\n
+		Walter email: hsieh.tl@outlook.com; LINE ID: walter0309\n
+		Lesley email: huang3657@gmail.com\n
+		for more information,\n
+		Or go to our FB fan page and leave us message via Messenger.
+		'''
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
