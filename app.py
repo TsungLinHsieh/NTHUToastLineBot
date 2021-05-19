@@ -64,14 +64,14 @@ def handle_message(event):
 
 	if msg in Location:
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
-		r ='Due to COVID-19, meeting will be held online at Zoom. Room ID: 81481060492; Password: 967360\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
+		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/rhv-mett-kmj\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
 
 	elif msg == 'Location & Meeting Time':
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室) from 19:00 to 21:00 every Thursday'
-		r ='Due to COVID-19, meeting will be held online at Zoom. Room ID: 81481060492; Password: 967360\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
+		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/rhv-mett-kmj\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
 	
 	elif msg in Time:
-		r = 'Meeting will be held from 19:00 to 21:00 every Thursday'
+		r = 'Meeting will be held online from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
 		r = '''You can contact\nJohnny chenhuachuang@gmail.com\nWalter hsieh.tl@outlook.com\nLesley huang3657@gmail.com for more information,or go to our FB fan page and leave us message via Messenger.'''
