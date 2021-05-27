@@ -64,11 +64,11 @@ def handle_message(event):
 
 	if msg in Location:
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
-		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/rhv-mett-kmj\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
+		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
 
 	elif msg == 'Location & Meeting Time':
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室) from 19:00 to 21:00 every Thursday'
-		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/rhv-mett-kmj\nhttps://us02web.zoom.us/j/81481060492?pwd=VFdGOURUWjQrY0JpY0R0T1V3SGsyQT09'
+		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
 	
 	elif msg in Time:
 		r = 'Meeting will be held online from 19:00 to 21:00 every Thursday'
