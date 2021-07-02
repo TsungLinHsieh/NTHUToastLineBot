@@ -64,17 +64,19 @@ def handle_message(event):
 
 	if msg in Location:
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室)'
-		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
+		# r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
+		r ='Due to COVID-19, meeting will be held online at ZOOM https://us02web.zoom.us/j/87852935032?pwd=NytQT0dqdjVyQ0VJdVJxRHl0VnBwdz09'
 
 	elif msg == 'Location & Meeting Time':
 		# r = 'Meeting will take place at NTHU Delta Hall R601 (清華大學 台達館 601室) from 19:00 to 21:00 every Thursday'
-		r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
+		# r ='Due to COVID-19, meeting will be held online at Google Meet https://meet.google.com/voh-rius-bvu'
+		r ='Due to COVID-19, meeting will be held online at ZOOM https://us02web.zoom.us/j/87852935032?pwd=NytQT0dqdjVyQ0VJdVJxRHl0VnBwdz09'
 	
 	elif msg in Time:
 		r = 'Meeting will be held online from 19:00 to 21:00 every Thursday'
 
 	elif msg in Contact:
-		r = '''You can contact\nJohnny chenhuachuang@gmail.com\nWalter hsieh.tl@outlook.com\nLesley huang3657@gmail.com for more information,or go to our FB fan page and leave us message via Messenger.'''
+		r = 'write an email to us \nnthutoastmasters@gmail.com'
 
 	elif msg in FB:
 		r = 'https://www.facebook.com/nthutoastmasters/'
