@@ -73,7 +73,7 @@ def handle_message(event):
 		r ='Due to COVID-19, meeting will be held online at ZOOM (ID: 87852935032, Password: 452318) https://us02web.zoom.us/j/87852935032?pwd=NytQT0dqdjVyQ0VJdVJxRHl0VnBwdz09'
 	
 	elif msg in Time:
-		r = 'Meeting will be held online from 19:00 to 21:00 every Thursday'
+		r = 'Meeting will be held online from 19:00 to 21:00 on 2th and 4th Thursday each month'
 
 	elif msg in Contact:
 		r = 'write an email to us \nnthutoastmasters@gmail.com'
