@@ -46,7 +46,7 @@ def handle_message(event):
 	'7':"No, you don't need to be fluent. Here we provide friendly and English immersing evironment for you to practice.",
 	'8':"Don't worry about that. Only thing you need is to come and have fun.",
 	'9':'Join our regular meeting, we will help to go through the process.',
-	'10':"Toastmasters is nonprofit educational organization which helps its members improve their public speaking skills and build their leadership style.",
+	'10':"Toastmasters is a nonprofit educational organization which helps its members to improve their public speaking skills and build their leadership style. Find more in Toastmasters international website https://www.toastmasters.org",
 	'11':'I am a line-bot serving for NTHU toastmasters. And you are?',
 	'12':'I was first created on 2021-04-30 by Walter Hsieh. You do the math lol',
 	'13':'I like to chat with people even though we have nothing to say :)'
@@ -85,13 +85,13 @@ def handle_message(event):
 		r = chat[msg]
 
 	elif msg in Me:
-		r = 'Questions about me are listed below\n11 Who are you?\n12 How old are you?\n13 What is your hobby?\nPlease type 11, 12...for the annswer'
+		r = 'Questions about me are listed below\n11 Who are you?\n12 How old are you?\n13 What is your hobby?\nPlease type 11, 12...for the answer'
 	
 	elif msg in roles:
 		r = 'https://www.toastmasters.org/membership/club-meeting-roles'
 
 	elif msg == 'Q&A':
-		r = '7 Should I speak English fluently?\n8 Should I learn any thing before I join?\n9 How to join this club?\n10 What is Toastmaster?\nPlease type 7, 8...for the annswer'
+		r = '7 Should I speak English fluently?\n8 Should I learn any thing before I join?\n9 How to join this club?\n10 What is Toastmaster?\nPlease type 7, 8...for the answer'
 
 
 	line_bot_api.reply_message(
